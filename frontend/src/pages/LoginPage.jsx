@@ -14,8 +14,8 @@ function LoginPage() {
     try{
       const response = await axios.post('/login' , { email , password });
       console.log(response);
-      if(response.data.data){
-        setUser(response.data.data);
+      if(response.data.name){
+        setUser(response.data.name);
         setRedirect(true);
         alert('Login Successfull');
       }
